@@ -46,10 +46,11 @@ public class ReversedStringM1 {
 			}
 		}
 		String f1="";
-		for(int i=k-1;i<f.length();i++) {
+		k = k % f.length();
+		for(int i=f.length()-k;i<f.length();i++) {
 			f1 += f.charAt(i);
 		}
-		for(int i=0;i<k-1;i++) {
+		for(int i=0;i<(f.length()-k);i++) {
 			f1 += f.charAt(i);
 		}
 		System.out.println(f1);
